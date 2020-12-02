@@ -13,10 +13,11 @@ namespace MovieRentalAppProject
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             optionsBuilder
+                //.LogTo(s => System.Diagnostics.Debug.WriteLine(s))
                 .UseLazyLoadingProxies()
                 .UseSqlServer(
-                @"server=.\SQLEXPRESS;" +
-                @"database=MySaleDatabase;" +
+                @"server=.\SQLExpress;" +
+                @"database=SaleDatabase;" +
                 @"trusted_connection=true;" +
                 @"MultipleActiveResultSets=True"
                 );
@@ -24,17 +25,6 @@ namespace MovieRentalAppProject
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Customer>().HasData(new Customer
-            {
-                Id = 1,
-                FirstName = "William",
-                LastName = "Weinö",
-                Gender = Gender.Male
-            });    
-                
-                
-                
-
         }
     }
 }

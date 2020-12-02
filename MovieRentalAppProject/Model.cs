@@ -5,20 +5,13 @@ using System.Text;
 namespace MovieRentalAppProject
 
     {
-        public enum Gender
-        {
-            Male,
-            Female,
-        }
-
+       
     public class Customer
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
-        public virtual List<Rental> Sales { get; set; }
-        public Gender Gender { get; set; }
-
+        public virtual List<Rental> Sales { get; set; }       
     }
 
     public class Rental
@@ -27,7 +20,6 @@ namespace MovieRentalAppProject
         public DateTime Date { get; set; }
         public virtual Customer Customer { get; set; }
         public virtual Movie Movie { get; set;}
-
     }
 
     public class Movie
