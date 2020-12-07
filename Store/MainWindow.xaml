@@ -12,9 +12,66 @@
         Topmost="True"
         WindowStyle="None"
         WindowStartupLocation="CenterScreen">
+    <Window.Resources>
 
+        <ImageBrush x:Key="tb_mouse_over" 
+                    ImageSource="/Images/img_mouseover.png" />
+
+        <Style x:Key="tb_style" TargetType="{x:Type ToggleButton}">
+
+            <Setter Property="Template">
+
+                <Setter.Value>
+
+                    <ControlTemplate TargetType="{x:Type ToggleButton}">
+
+                        <Border x:Name="border"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                Background="{TemplateBinding Background}"
+                                SnapsToDevicePixels="True">
+                                                                                           
+                        </Border>
+
+                        <ControlTemplate.Triggers>
+
+                            <Trigger Property="IsMouseOver" Value="True">
+
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_mouse_over}"/>
+
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_mouse_over}"/>
+
+                            </Trigger>
+
+                            <Trigger Property="IsChecked" Value="True">
+
+                                <Setter Property="Background"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_mouse_over}"/>
+
+                                <Setter Property="BorderBrush"
+                                        TargetName="border"
+                                        Value="{StaticResource tb_mouse_over}"/>
+
+                            </Trigger>
+                            
+                        </ControlTemplate.Triggers>
+                        
+                    </ControlTemplate>
+                                       
+                </Setter.Value>
+                              
+            </Setter>
+                                    
+        </Style>
+
+    </Window.Resources>
+    
+    
     <Grid>
-
 
 
         <Grid Background="Black">
@@ -48,7 +105,7 @@
 
                             </ToggleButton.Background>
                             
-                            <!--// Trigger for toggle button to se if-->
+                            <!--// Trigger for toggle button to see if its checked or not-->
 
                             <ToggleButton.Triggers>
 
