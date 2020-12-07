@@ -7,8 +7,49 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Remove="Images\img_background.jpg" />
+    <None Remove="Images\img_close.png" />
+    <None Remove="Images\img_home.png" />
+    <None Remove="Images\img_menu.png" />
+    <None Remove="Images\img_mouseover.png" />
+    <None Remove="Images\img_movie.png" />
+    <None Remove="Images\img_news.png" />
+    <None Remove="Images\img_settings.png" />
+    <None Remove="Images\img_signout.png" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="Font\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\img_background.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\img_close.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\img_home.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\img_menu.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\img_mouseover.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\img_movie.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\img_news.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\img_settings.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Images\img_signout.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

@@ -45,17 +45,23 @@ namespace Store
             }
         }
 
-        private void tg_btn_unchecked(object sender, RoutedEventArgs e)
+        private void Tg_btn_unchecked(object sender, RoutedEventArgs e)
         {
-            BG.Opacity = 1;
+            img_background.Opacity = 1;
         }
 
-        private void tg_btn_checked(object sender, RoutedEventArgs e)
+        private void Tg_btn_checked(object sender, RoutedEventArgs e)
         {
-            BG.Opacity = 0.3;
+            img_background.Opacity = 0.3;
         }
 
-        private void BG_PreviewMouseLeftButtonDown(object sender, RoutedEventArgs e)
+        private void Closebtn_click(object sender, RoutedEventArgs e)
+        {
+            Close();
+               
+        }
+
+        private void BG_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             tg_btn.IsChecked = false;
         }

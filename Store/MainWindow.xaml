@@ -59,7 +59,7 @@
             <Setter Property="HorizontalContentAlignment" Value="Center"/>
 
         </Style>
-        
+
         <!--// App Close Templates //-->
 
         <ImageBrush x:Key="CloseBtn_MouseOver" ImageSource="Images/img_close.png"/>
@@ -76,7 +76,7 @@
                                 BorderThickness="0"
                                 Background="{TemplateBinding Background}"
                                 SnapsToDevicePixels="True">
-                            
+
                         </Border>
 
                         <ControlTemplate.Triggers>
@@ -90,13 +90,13 @@
 
 
                             </Trigger>
-                            
+
                         </ControlTemplate.Triggers>
-                        
+
                     </ControlTemplate>
-                    
+
                 </Setter.Value>
-                
+
             </Setter>
 
         </Style>
@@ -161,18 +161,19 @@
 
         <Grid Background="Black">
 
-            <Grid x:Name="background">
+            <Grid x:Name="BG" PreviewMouseLeftButtonDown="BG_PreviewMouseLeftButtonDown">
 
                 <Grid.Background>
 
-                    <ImageBrush x:Name="BG"
+                    <ImageBrush x:Name="img_background"
                                 ImageSource="Images/img_background.jpg"
                                 Stretch="Fill"/>
+ 
                 </Grid.Background>
 
 
             </Grid>
-            
+
             <!--// Close button //-->
 
             <Grid>
@@ -180,7 +181,7 @@
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="60"/>
-                    <ColumnDefinition Width="30"/>   
+                    <ColumnDefinition Width="30"/>
                 </Grid.ColumnDefinitions>
 
                 <Grid.RowDefinitions>
@@ -201,15 +202,15 @@
                         <ImageBrush ImageSource="Images/Img_close.png"/>
 
                     </Button.Background>
-                                       
+
                 </Button>
-                                                 
+
             </Grid>
 
             <Grid x:Name="nav_pnl"
                       HorizontalAlignment="Left"
                       Width="65"
-                      Background="FloralWhite">
+                      Background="Gainsboro">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="73*"/>
                     <RowDefinition Height="27*"/>
@@ -256,7 +257,7 @@
                                               Height="46"
                                               Width="45"
                                               BorderThickness="0"
-                                              Style="{StaticResource tb_style}" Unchecked="tg_btn_unchecked">
+                                              Style="{StaticResource tb_style}" Unchecked="Tg_btn_unchecked">
 
 
                             <!--// Toggle button background images //-->
@@ -329,8 +330,9 @@
                     <ListView   x:Name="LV"
                                 Background="Transparent"
                                 BorderBrush="Transparent"
-                                ScrollViewer.HorizontalScrollBarVisibility="Disabled" SelectionChanged="LV_SelectionChanged">
+                                ScrollViewer.HorizontalScrollBarVisibility="Disabled">
 
+                            
                         <!--// Home //-->
 
                         <ListViewItem HorizontalAlignment="Left"
@@ -540,5 +542,5 @@
         </Grid>
 
     </Grid>
-
+    
 </Window>
