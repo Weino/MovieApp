@@ -44,9 +44,61 @@
                             <ToggleButton.Background>
 
                                 <ImageBrush ImageSource="Images/img_home.png"
-                                                    Stretch="None"/>
+                                                        Stretch="None"/>
 
                             </ToggleButton.Background>
+                            
+                            <!--// Trigger for toggle button to se if-->
+
+                            <ToggleButton.Triggers>
+
+                                <EventTrigger RoutedEvent="ToggleButton.Unchecked">
+
+                                    <BeginStoryboard>
+
+                                        <Storyboard x:Name="HideStackPanel">
+
+                                            <DoubleAnimation      
+                                                
+                                                 Storyboard.TargetName="nav_pnl"
+                                                 Storyboard.TargetProperty="Width"
+                                                 BeginTime="0:0:0"
+                                                 From= "230" To = "65"
+                                                 Duration= "0:0:0.1">
+                                                                                                                                                
+                                            </DoubleAnimation>
+                                            
+                                        </Storyboard>
+                                        
+                                    </BeginStoryboard>
+                                    
+                                    
+                                </EventTrigger>
+
+                                <EventTrigger RoutedEvent="ToggleButton.Checked">
+
+                                    <BeginStoryboard>
+
+                                        <Storyboard x:Name="ShowStackPanel">
+
+                                            <DoubleAnimation
+                                                
+                                                Storyboard.TargetName="nav_pnl"
+                                                Storyboard.TargetProperty="Width"
+                                                BeginTime="0:0:0"
+                                                From="65" To="230"
+                                                Duration="0:0:0.2">
+
+                                            </DoubleAnimation>
+                                                                                                                                                        
+                                        </Storyboard>
+                                        
+                                    </BeginStoryboard>
+                                    
+                                </EventTrigger>
+                                                                
+                            </ToggleButton.Triggers>
+                            
 
                         </ToggleButton>
 
