@@ -74,7 +74,7 @@
 
                         <Border x:Name="button"
                                 BorderThickness="0"
-                                Background="{TemplateBinding}"
+                                Background="{TemplateBinding Background}"
                                 SnapsToDevicePixels="True">
                             
                         </Border>
@@ -86,9 +86,9 @@
 
                                 <Setter Property="Background"
                                         TargetName="button"
-                                        Value="{StaticResource CloseBtn_MouseOver}">
+                                        Value="{StaticResource CloseBtn_MouseOver}"/>
 
-                                </Setter>
+
                             </Trigger>
                             
                         </ControlTemplate.Triggers>
