@@ -5,8 +5,60 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Store"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" 
+        Height="600" 
+        Width="800"
+        ResizeMode="NoResize"
+        Topmost="True"
+        WindowStyle="None"
+        WindowStartupLocation="CenterScreen">
+
     <Grid>
 
+
+
+        <Grid Background="Black">
+
+            <Grid x:Name="nav_pnl"
+                      HorizontalAlignment="Left"
+                      Width="65"
+                      Background="LightGray">
+
+                <StackPanel x:Name="st_pnl">
+
+                    <!--//Grid for the Menu Toggle Button //-->
+
+                    <Grid Height="80">
+
+
+                        <ToggleButton x:Name="tg_btn"
+                                              VerticalAlignment="Top"
+                                              HorizontalAlignment="Center"
+                                              Margin="0,15,0,0"
+                                              Height="46"
+                                              Width="45"
+                                              BorderThickness="0">
+
+                            <!--// Toggle button background images //-->
+
+                            <ToggleButton.Background>
+
+                                <ImageBrush ImageSource="Images/img_home.png"
+                                                    Stretch="None"/>
+
+                            </ToggleButton.Background>
+
+                        </ToggleButton>
+
+                    </Grid>
+
+                </StackPanel>
+
+
+            </Grid>
+
+        </Grid>
+
     </Grid>
+
 </Window>
