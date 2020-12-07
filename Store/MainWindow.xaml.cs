@@ -27,6 +27,7 @@ namespace Store
 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
         {
+            
             if (tg_btn.IsChecked == true)
             {
                 tt_home.Visibility = Visibility.Collapsed;
@@ -47,23 +48,44 @@ namespace Store
 
         private void Tg_btn_unchecked(object sender, RoutedEventArgs e)
         {
-            img_background.Opacity = 1;
+
         }
 
         private void Tg_btn_checked(object sender, RoutedEventArgs e)
         {
-            img_background.Opacity = 0.3;
+            
         }
 
-        private void Closebtn_click(object sender, RoutedEventArgs e)
-        {
-            Close();
-               
-        }
 
         private void BG_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             tg_btn.IsChecked = false;
+        }
+
+        private void CloseBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
+
+        private void Home_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Home.Visibility = Visibility.Visible;
+            Movies.Visibility = Visibility.Hidden;
+            News.Visibility = Visibility.Hidden;
+        }
+
+        private void Movie_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Home.Visibility = Visibility.Hidden;
+            Movies.Visibility = Visibility.Visible;
+            News.Visibility = Visibility.Hidden;
+        }
+
+        private void News_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Home.Visibility = Visibility.Hidden;
+            Movies.Visibility = Visibility.Hidden;
+            News.Visibility = Visibility.Visible;
         }
     }
 }

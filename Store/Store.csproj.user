@@ -7,7 +7,27 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="Subviews\Home.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Subviews\Movies.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="Subviews\News.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
     <Page Update="MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Subviews\Home.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Subviews\Movies.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Subviews\News.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
