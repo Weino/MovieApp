@@ -44,5 +44,20 @@ namespace Store
                 tt_signout.Visibility = Visibility.Visible;
             }
         }
+
+        private void tg_btn_unchecked(object sender, RoutedEventArgs e)
+        {
+            img_bg.Opacity = 1;
+        }
+
+        private void tg_btn_checked(object sender, RoutedEventArgs e)
+        {
+            img_bg.Opacity = 0.3;
+        }
+
+        private void BG_PreviewMouseLeftButtonDown(object sender, RoutedEventArgs e)
+        {
+            tg_btn.IsChecked = false;
+        }
     }
 }
