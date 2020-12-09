@@ -53,7 +53,7 @@ namespace Store.Subviews {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/Store;component/subviews/home.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/Store;V1.0.0.0;component/subviews/home.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Subviews\Home.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);
