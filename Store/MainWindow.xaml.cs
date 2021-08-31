@@ -28,7 +28,7 @@ namespace Store
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
         {
             
-            if (tg_btn.IsChecked == true)
+            if (Tg_Btn.IsChecked == true)
             {
                 tt_home.Visibility = Visibility.Collapsed;
                 tt_news.Visibility = Visibility.Collapsed;
@@ -46,20 +46,10 @@ namespace Store
             }
         }
 
-        private void Tg_btn_unchecked(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void Tg_btn_checked(object sender, RoutedEventArgs e)
-        {
-            
-        }
-
 
         private void BG_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            tg_btn.IsChecked = false;
+            Tg_Btn.IsChecked = false;
         }
 
         private void CloseBtn_Click(object sender, RoutedEventArgs e)
@@ -86,6 +76,16 @@ namespace Store
             Home.Visibility = Visibility.Hidden;
             Movies.Visibility = Visibility.Hidden;
             News.Visibility = Visibility.Visible;
+        }
+
+        private void Tg_Btn_Unchecked(object sender, RoutedEventArgs e)
+        {
+            Tg_Btn.Opacity = 1;
+        }
+
+        private void Tg_Btn_Checked(object sender, RoutedEventArgs e)
+        {
+            Tg_Btn.Opacity = 0.3;
         }
     }
 }

@@ -3,7 +3,6 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:Store" 
         xmlns:sub="clr-namespace:Store.Subviews"
         mc:Ignorable="d"
         Title="MainWindow" 
@@ -163,6 +162,7 @@
         <sub:Home x:Name="Home" Visibility="Visible"></sub:Home>
         <sub:Movies x:Name="Movies" Visibility="Hidden"></sub:Movies>
         <sub:News x:Name="News" Visibility="Hidden"></sub:News>
+        
 
 
         <Grid>
@@ -250,14 +250,15 @@
 
                         <!--// Here is the toggle button //-->
 
-                        <ToggleButton x:Name="tg_btn"
-                                              VerticalAlignment="Top"
-                                              HorizontalAlignment="Center"
-                                              Margin="0,10,0,0"
-                                              Height="46"
-                                              Width="45"
-                                              BorderThickness="0"
-                                              Style="{StaticResource tb_style}" Unchecked="Tg_btn_unchecked">
+                        <ToggleButton x:Name="Tg_Btn"
+                                      Grid.Column="0"
+                                      VerticalAlignment="Center"
+                                      HorizontalAlignment="Left"
+                                      Margin="18,-20,0,0"
+                                      Height="30"
+                                      Width="30"
+                                      BorderThickness="0"
+                                      Style="{StaticResource tb_style}" Unchecked="Tg_Btn_Unchecked" Checked="Tg_Btn_Checked">
 
 
                             <!--// Toggle button background images //-->

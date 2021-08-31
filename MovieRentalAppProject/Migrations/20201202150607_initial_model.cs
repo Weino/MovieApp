@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace MovieRentalAppProject.Migrations
 {
-    public partial class initial_model : Migration
+    public partial class Initial_model : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {

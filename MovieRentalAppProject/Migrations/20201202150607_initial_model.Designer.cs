@@ -11,7 +11,7 @@ namespace MovieRentalAppProject.Migrations
 {
     [DbContext(typeof(Context))]
     [Migration("20201202150607_initial_model")]
-    partial class initial_model
+    partial class Initial_model
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
