@@ -22,7 +22,19 @@ namespace Store.Subviews
         public Movies()
         {
             InitializeComponent();
-            State.Movies = API.GetMovieSlice(0, 50);
+
+            UpdateMovieGrid(API.GetMovieSlice(0, 50));
+
+        }
+
+        private void UpdateMovieGrid(List<Movie> Movies)
+        {
+            if (State.Movies != null)
+            {
+                State.Movies.Clear();
+                MoviesGrid.Children.Clear();
+            }
+            State.Movies = Movies;
             for (int y = 0; y < MoviesGrid.RowDefinitions.Count; y++)
             {
                 for (int x = 0; x < MoviesGrid.ColumnDefinitions.Count; x++)
@@ -31,7 +43,6 @@ namespace Store.Subviews
                     if (i < State.Movies.Count)
                     {
                         var movie = State.Movies[i];
-
                         try
                         {
 
@@ -61,7 +72,7 @@ namespace Store.Subviews
                             MoviesGrid.Children.Add(title); // säger till att texten ska tillhöra den gridden
                             Grid.SetRow(title, y); // vilken grid i y
                             Grid.SetColumn(title, x); // vilken grid i x
-                            
+
                             /*
                             MoviesGrid.Children.Add(genre);
                             Grid.SetRow(genre, y);
@@ -78,7 +89,28 @@ namespace Store.Subviews
                     }
                 }
             }
+        }
 
+        public void SearchBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            var movies = API.GetMovieByName(searchBox.Text);
+            if (movies.Count < 1)
+            {
+                MessageBox.Show("No Movie(s) were found for search term: " + searchBox.Text);
+            }
+            else
+            {
+                UpdateMovieGrid(movies);
+            }
+            //State.Movies.AddRange(API.GetMovieByName(searchBox.Text));
+            //State.Movies.AddRange(API.GetMovieByGenre(searchBox.Text));
+            //var next_Seachwindow = new SearchWindow();
+            //next_Seachwindow.Show();
+        }
+
+        private void SearchBoxGotFocus(object sender, RoutedEventArgs e)
+        {
+            searchBox.Text = "";
         }
     }
 }
